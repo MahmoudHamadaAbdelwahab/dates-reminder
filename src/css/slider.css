@@ -1,0 +1,19 @@
+.slider{
+    margin-top: 10px;
+    background-color: #fff;
+}
+.slider img{
+    width:300px;
+    height: 350px;
+}
+.slider .info{
+    margin-bottom: 50px;
+}
+.slider h3 {
+font-size: 35px;
+color: red;
+}
+.slider p{
+    font-size: 20px;
+    color: #333;
+}

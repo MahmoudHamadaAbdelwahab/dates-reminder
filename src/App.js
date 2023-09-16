@@ -1,33 +1,27 @@
-import React , {useState} from 'react';
+import React  from 'react';
 import { Container} from "react-bootstrap";
-import {array} from './Data';
-import Dates from './compounent/Dates'
-import DatesList from "./compounent/DatesList";
-import DatesAction from "./compounent/DatesAction"
-
+import {Routes , Route} from 'react-router-dom'
+import ShopCard from './components/Ather/shop';
+import User from './components/Ather/user';
+import Details from './components/product/Details';
+import NavbarCart from './components/Ather/navbar';
+import HomePage from './homepage';
+import Footer from './components/home/footer';
+import RegisterPage from './components/Ather/register';
 function App() {
 
-  const [personData , setPersondata] = useState(array);
-
-  const onDelete=()=>{
-    setPersondata([]);
-  }
-
-  const onViewData = () =>{
-    setPersondata(array);
-  }
-
   return (
-    <div className="font color-body">
-
-      <Container className="py-5">
- 
-      <Dates array={personData}/>
-
-      <DatesList array={personData}/>
-
-      <DatesAction deleteData={onDelete} onViewData={onViewData}/>
-
+    <div className="color-body">
+      <Container>
+        <NavbarCart/>
+          <Routes>
+              <Route path="/" element={<HomePage/>} />
+              <Route path="/shop" element={<ShopCard />} />
+              <Route path="/user" element={<User/>} />
+              <Route path="products/:indexId" element={<Details/>} />
+              <Route path="/register" element={<RegisterPage/>} />
+          </Routes>
+          <Footer/>
       </Container>
     </div>
   );

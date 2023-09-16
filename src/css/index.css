@@ -1,0 +1,25 @@
+.color-body{
+    height:100h;
+    background-color: #979292;
+}
+.btn-style{
+    width: 200px;
+    border-radius: 8px;
+    color: white;
+    background-color: #222;
+}
+.font{
+    font-family: 'Almarai', sans-serif;
+    font-family:"cairo" , sans-serif;
+    font-size: 20px;
+}
+@media screen {
+    
+}
+/* start responsive  */
+@media (min-width:680px){
+    body{
+        width: 100%;
+    }    
+}
+/* end responsive  */
